@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h2{font-size:500%; font-family:helvetica}
+p{font-size:200%; font-family:helvetica}
+</style>
+</head>
+<div style = \"width:80%; margin: 0 auto\">
+<center><h1>Choose a network to join:</h1></center>
+<form align=\"left\" method=\"POST\" autocomplete=\"off\">
+<p><u><b>1. Choose network:</u></b><br>
+other: <input type=\"text\" name=\"otherSSID\"><br><br>
+<u><b>2. Enter password (or blank for none):</u></b><br><input type=\"text\" name=\"password\"><br><br>
+<input style=\"font-size:30pt\" type=\"submit\" value=\"Submit\">
+</p></form>
+<br><br><br>
+<form align=\"center\" method=\"POST\">
+<input type=\"hidden\" name=\"deleteSaved\" value=\"true\">
+<input type=\"submit\" value=\"Delete all saved networks\" style=\"font-size:30pt; color:red\">
+</form>
+</div>
+</html>
