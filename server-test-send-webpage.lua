@@ -14,10 +14,11 @@ srv:listen(80,function(conn)
 end)
 
 function sendWebpage(client, pageFile)
+    file.open(pageFile)
     line = file.readline()
     while (line~=nul) do
-        file.open(pageFile)
         client:send(line)
         print(line)
+        line = file.readline()
     end
 end
