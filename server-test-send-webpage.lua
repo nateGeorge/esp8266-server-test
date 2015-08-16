@@ -16,9 +16,10 @@ end)
 function sendWebpage(client, pageFile)
     file.open(pageFile)
     line = file.readline()
+    line = string.sub(line,1,string.len(line)-1) --hack to remove CR/LF
     while (line~=nul) do
         client:send(line)
-        print(string.sub(line,1,string.len(line)-1)) --hack to remove CR/LF
+        print(line)
         line = file.readline()
     end
 end
